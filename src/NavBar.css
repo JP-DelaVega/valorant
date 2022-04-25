@@ -1,0 +1,27 @@
+@import url('http://fonts.cdnfonts.com/css/valorant');
+
+nav{
+    font-size: 20px !important;
+    z-index: 1;
+    height: 7vh !important;
+    
+  }
+.navbar-brand{
+    font-size: 30px !important;
+    color: #FD4556 !important ;
+    font-weight: bold;
+    font-family: 'VALORANT', sans-serif;
+
+}
+
+
+  @media only screen and (max-width: 1000px) {
+    nav{
+      font-size: 17px !important;
+    
+    }
+  .navbar-brand{
+      font-size: 25px !important;
+      
+  }
+}

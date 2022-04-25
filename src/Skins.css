@@ -1,0 +1,36 @@
+.back{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.gunInfo2{
+    padding: 20px;
+    width: 80%;
+    min-height: 530px;
+    border-radius: 5px;
+    margin-top: 13px;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 0 1px 3px hsla(0,0%, 0%, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #555  5px solid;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.gun-name2{
+    font-size: 60px;
+}
+@media only screen and (max-width: 1000px) {
+    .gun-name2{
+        font-size: 50px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .gun-name2{
+        font-size: 40px;
+    }
+}

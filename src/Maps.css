@@ -1,0 +1,53 @@
+
+.mapdiv{
+    background-image: url('./images/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.modal-body  {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.button-map{
+    background-color: rgba(255,255,255,0);
+    border: none;
+}
+.mapIcon{
+    width: 70%;
+}
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.2);
+    
+  }
+.nameImage{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.maps-image{
+    width: 80%;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+.maps-name{
+    padding-top: 20px;
+    font-family: 'VALORANT', sans-serif;
+}
+.maps-imageIcon{
+    width: 20%;
+}
+@media only screen and (max-width: 750px) {
+    .modal-dialog  {
+        width: 60%; 
+    }
+    .modal-dialog {
+        margin: auto;
+      }
+}

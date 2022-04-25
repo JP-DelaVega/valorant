@@ -1,0 +1,103 @@
+.main-page{
+    min-height: 93vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);;
+    background-size: 400% 400%;
+    position: relative;
+    animation: animate 7.5s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+@keyframes animate{
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+  }
+.welcome{
+    color: rgb(255, 255, 255, .8);
+    font-weight: 700;
+    font-size: 60px;
+    z-index: 999;
+}
+.learn-more{
+    z-index: 9999;
+    margin: 20px;
+    display: inline-block;
+  padding: 0.75rem 1rem;
+	border: 0;
+	border-radius: 0.317rem;
+	background-color: rgb(255, 255, 255, .2);
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1rem;
+  line-height: 1.5;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+.learn-more:hover {
+	opacity: 0.85;
+}
+
+.learn-more:active {
+	box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.learn-more:focus {
+	outline: thin dotted #444;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+.valLogo{
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+@media only screen and (max-width: 1000px) {
+    .welcome{
+        font-weight: 600;
+        font-size: 50px;
+    }
+    .valLogo{
+        height: 80%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .welcome{
+        font-weight: 500;
+        font-size: 40px;
+    }
+    .learn-more{
+        margin: 15px;
+        padding: 0.60rem .75rem;
+        font-weight: 600;
+        font-size: .75rem;
+        line-height: 1;
+    }
+    .valLogo{
+        height: 60%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .welcome{
+        font-weight: 500;
+        font-size: 30px;
+    }
+    .valLogo{
+        height: 50%;
+    }
+}

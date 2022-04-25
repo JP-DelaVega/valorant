@@ -1,0 +1,87 @@
+import React from 'react'
+import "../Armory.css"
+export default function Armory() {
+  const [allData, setAllData] = React.useState([])
+  React.useEffect(() => {
+    fetch("https://valorant-api.com/v1/weapons")
+      .then(res => res.json())
+      .then(data => setAllData(data.data))
+  }, [])
+
+  const rifle = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Rifle") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const heavy = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Heavy") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const shotgun = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Shotgun") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const sidearm = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Sidearm") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const sniper = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Sniper") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const smg = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::SMG") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  const melee = allData.filter((val) => {
+    if (val.category === "EEquippableCategory::Melee") {
+      return val
+    }
+    return ""
+  }).map((item) => (
+    <img src={item.displayIcon} alt="guns" className="gunIcon"></img>
+  ))
+
+  console.log(allData)
+
+  return (
+    <>
+      <div className='gunDiv'>{rifle}</div>
+      <div className='gunDiv'>{heavy}</div>
+      <div className='gunDiv'>{shotgun}</div>
+      <div className='gunDiv'>{sidearm}</div>
+      <div className='gunDiv'>{sniper}</div>
+      <div className='gunDiv'>{smg}</div>
+      <div className='gunDiv'>{melee}</div>
+    </>
+  )
+}
